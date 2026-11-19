@@ -1,8 +1,8 @@
 resource "aws_instance" "amazon_linux_2023" {
-  ami           = "ami-08b7b9fdd7a1edf3d"
-  instance_type = "t2.medium"
+  ami           = "ami-0daaea3de6306348a"
+  instance_type = "t3.medium"
 
-  key_name = "terraform-keypair"
+  key_name = "aws-keypair"
 
   vpc_security_group_ids = [aws_security_group.amazon_linux_sg.id]
 
@@ -11,7 +11,7 @@ resource "aws_instance" "amazon_linux_2023" {
   }
 
   root_block_device {
-    volume_size = 18
+    volume_size = 10
     volume_type = "gp3"
   }
 }
