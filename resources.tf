@@ -1,5 +1,5 @@
 resource "aws_instance" "amazon_linux_2023" {
-  ami           = "ami-0daaea3de6306348a"
+  ami           = "ami-062e367aff5bc494b"
   instance_type = "t3.medium"
 
   key_name = "aws-keypair"
